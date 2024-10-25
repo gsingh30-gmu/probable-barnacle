@@ -51,7 +51,7 @@ client.on('presenceUpdate', (oldPresence, newPresence) => {
 
     const userId = newPresence.userId;
 
-    if (!userIdsToTrack.includes(userId)) return;
+    if (!userIdsToTrack.includes(userId) || newPresence.activites[0].name === undefined) return;
     if (newPresence.activities[0].name !== "Custom Status") return;
 
     let statusMessage = newPresence.activities[0].state;
