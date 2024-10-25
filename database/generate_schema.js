@@ -5,7 +5,7 @@ const defineMessage = require('./models/Message');
 const sequelize = new Sequelize({
     dialect: 'sqlite',
     storage: 'data.db',
-    logging: console.log, // Logs SQL queries, can be removed in production
+    logging: console.log,
 });
 
 // Define the models (i.e. database tables) here
